@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'halaman_detail.dart';
 
-class LoginPage extends StatelessWidget {
+class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -14,7 +13,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _header(),
-              _inputField(context),
+              _inputField(),
             ],
           ),
         ),
@@ -26,27 +25,26 @@ class LoginPage extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Halaman Utama",
+          "Halaman Detail",
           style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
         ),
       ],
     );
   }
 
-  _inputField(context) {
-
+  _inputField() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
           onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DetailPage()),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => HitungPage()),
+              // );
           },
           child: Text(
-            "Masuk ke halaman detail",
+            "Anda di halaman detail",
             style: TextStyle(fontSize: 20),
           ),
           style: ElevatedButton.styleFrom(
